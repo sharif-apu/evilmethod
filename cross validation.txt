@@ -1,0 +1,347 @@
+sharif-apu@sharifapu-MS-7721:~/MEGAsync/new_numeral/exp/cross validation$ python new_numeral_4.py 
+Using Theano backend.
+Using gpu device 0: GeForce GT 610 (CNMeM is enabled with initial size: 10.0% of memory, cuDNN not available)
+/usr/local/lib/python2.7/dist-packages/keras/datasets/data_utils.py:4: UserWarning: data_utils has been moved to keras.utils.data_utils.
+  warnings.warn('data_utils has been moved to keras.utils.data_utils.')
+./iso_char_cnn_weight/
+Training Data is Getting Ready!
+____________________________________________________________________________________________________
+Layer (type)                     Output Shape          Param #     Connected to                     
+====================================================================================================
+convolution2d_1 (Convolution2D)  (None, 32, 26, 26)    320         convolution2d_input_1[0][0]      
+____________________________________________________________________________________________________
+activation_1 (Activation)        (None, 32, 26, 26)    0           convolution2d_1[0][0]            
+____________________________________________________________________________________________________
+convolution2d_2 (Convolution2D)  (None, 32, 24, 24)    9248        activation_1[0][0]               
+____________________________________________________________________________________________________
+dropout_1 (Dropout)              (None, 32, 24, 24)    0           convolution2d_2[0][0]            
+____________________________________________________________________________________________________
+activation_2 (Activation)        (None, 32, 24, 24)    0           dropout_1[0][0]                  
+____________________________________________________________________________________________________
+convolution2d_3 (Convolution2D)  (None, 32, 22, 22)    9248        activation_2[0][0]               
+____________________________________________________________________________________________________
+dropout_2 (Dropout)              (None, 32, 22, 22)    0           convolution2d_3[0][0]            
+____________________________________________________________________________________________________
+activation_3 (Activation)        (None, 32, 22, 22)    0           dropout_2[0][0]                  
+____________________________________________________________________________________________________
+maxpooling2d_1 (MaxPooling2D)    (None, 32, 11, 11)    0           activation_3[0][0]               
+____________________________________________________________________________________________________
+dropout_3 (Dropout)              (None, 32, 11, 11)    0           maxpooling2d_1[0][0]             
+____________________________________________________________________________________________________
+flatten_1 (Flatten)              (None, 3872)          0           dropout_3[0][0]                  
+____________________________________________________________________________________________________
+dense_1 (Dense)                  (None, 512)           1982976     flatten_1[0][0]                  
+____________________________________________________________________________________________________
+activation_4 (Activation)        (None, 512)           0           dense_1[0][0]                    
+____________________________________________________________________________________________________
+dropout_4 (Dropout)              (None, 512)           0           activation_4[0][0]               
+____________________________________________________________________________________________________
+dense_2 (Dense)                  (None, 10)            5130        dropout_4[0][0]                  
+____________________________________________________________________________________________________
+activation_5 (Activation)        (None, 10)            0           dense_2[0][0]                    
+====================================================================================================
+Total params: 2006922
+____________________________________________________________________________________________________
+./epoch_0_e69-0.04.hdf5
+Traceback (most recent call last):
+  File "new_numeral_4.py", line 162, in <module>
+    model.load_weights(mod_wgt_dir)
+  File "/usr/local/lib/python2.7/dist-packages/keras/engine/topology.py", line 2494, in load_weights
+    f = h5py.File(filepath, mode='r')
+  File "/usr/local/lib/python2.7/dist-packages/h5py/_hl/files.py", line 272, in __init__
+    fid = make_fid(name, mode, userblock_size, fapl, swmr=swmr)
+  File "/usr/local/lib/python2.7/dist-packages/h5py/_hl/files.py", line 92, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper (/tmp/pip-4rPeHA-build/h5py/_objects.c:2684)
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper (/tmp/pip-4rPeHA-build/h5py/_objects.c:2642)
+  File "h5py/h5f.pyx", line 76, in h5py.h5f.open (/tmp/pip-4rPeHA-build/h5py/h5f.c:1930)
+IOError: Unable to open file (Unable to open file: name = './epoch_0_e69-0.04.hdf5', errno = 2, error message = 'no such file or directory', flags = 0, o_flags = 0)
+sharif-apu@sharifapu-MS-7721:~/MEGAsync/new_numeral/exp/cross validation$ python cmaterdb_new_numeral_4.py 
+Using Theano backend.
+Using gpu device 0: GeForce GT 610 (CNMeM is enabled with initial size: 10.0% of memory, cuDNN not available)
+/usr/local/lib/python2.7/dist-packages/keras/datasets/data_utils.py:4: UserWarning: data_utils has been moved to keras.utils.data_utils.
+  warnings.warn('data_utils has been moved to keras.utils.data_utils.')
+./iso_char_cnn_weight/
+Training Data is Getting Ready!
+____________________________________________________________________________________________________
+Layer (type)                     Output Shape          Param #     Connected to                     
+====================================================================================================
+convolution2d_1 (Convolution2D)  (None, 32, 26, 26)    320         convolution2d_input_1[0][0]      
+____________________________________________________________________________________________________
+activation_1 (Activation)        (None, 32, 26, 26)    0           convolution2d_1[0][0]            
+____________________________________________________________________________________________________
+convolution2d_2 (Convolution2D)  (None, 32, 24, 24)    9248        activation_1[0][0]               
+____________________________________________________________________________________________________
+dropout_1 (Dropout)              (None, 32, 24, 24)    0           convolution2d_2[0][0]            
+____________________________________________________________________________________________________
+activation_2 (Activation)        (None, 32, 24, 24)    0           dropout_1[0][0]                  
+____________________________________________________________________________________________________
+convolution2d_3 (Convolution2D)  (None, 32, 22, 22)    9248        activation_2[0][0]               
+____________________________________________________________________________________________________
+dropout_2 (Dropout)              (None, 32, 22, 22)    0           convolution2d_3[0][0]            
+____________________________________________________________________________________________________
+activation_3 (Activation)        (None, 32, 22, 22)    0           dropout_2[0][0]                  
+____________________________________________________________________________________________________
+maxpooling2d_1 (MaxPooling2D)    (None, 32, 11, 11)    0           activation_3[0][0]               
+____________________________________________________________________________________________________
+dropout_3 (Dropout)              (None, 32, 11, 11)    0           maxpooling2d_1[0][0]             
+____________________________________________________________________________________________________
+flatten_1 (Flatten)              (None, 3872)          0           dropout_3[0][0]                  
+____________________________________________________________________________________________________
+dense_1 (Dense)                  (None, 512)           1982976     flatten_1[0][0]                  
+____________________________________________________________________________________________________
+activation_4 (Activation)        (None, 512)           0           dense_1[0][0]                    
+____________________________________________________________________________________________________
+dropout_4 (Dropout)              (None, 512)           0           activation_4[0][0]               
+____________________________________________________________________________________________________
+dense_2 (Dense)                  (None, 10)            5130        dropout_4[0][0]                  
+____________________________________________________________________________________________________
+activation_5 (Activation)        (None, 10)            0           dense_2[0][0]                    
+====================================================================================================
+Total params: 2006922
+____________________________________________________________________________________________________
+./EEI.hdf5
+6000/6000 [==============================] - 6s     
+6000
+[0.020512702714651825, 0.99516666666666664]
+sharif-apu@sharifapu-MS-7721:~/MEGAsync/new_numeral/exp/cross validation$ python cmaterdb_new_numeral_4.py 
+Using Theano backend.
+Using gpu device 0: GeForce GT 610 (CNMeM is enabled with initial size: 10.0% of memory, cuDNN not available)
+/usr/local/lib/python2.7/dist-packages/keras/datasets/data_utils.py:4: UserWarning: data_utils has been moved to keras.utils.data_utils.
+  warnings.warn('data_utils has been moved to keras.utils.data_utils.')
+./iso_char_cnn_weight/
+Training Data is Getting Ready!
+____________________________________________________________________________________________________
+Layer (type)                     Output Shape          Param #     Connected to                     
+====================================================================================================
+convolution2d_1 (Convolution2D)  (None, 32, 26, 26)    320         convolution2d_input_1[0][0]      
+____________________________________________________________________________________________________
+activation_1 (Activation)        (None, 32, 26, 26)    0           convolution2d_1[0][0]            
+____________________________________________________________________________________________________
+convolution2d_2 (Convolution2D)  (None, 32, 24, 24)    9248        activation_1[0][0]               
+____________________________________________________________________________________________________
+dropout_1 (Dropout)              (None, 32, 24, 24)    0           convolution2d_2[0][0]            
+____________________________________________________________________________________________________
+activation_2 (Activation)        (None, 32, 24, 24)    0           dropout_1[0][0]                  
+____________________________________________________________________________________________________
+convolution2d_3 (Convolution2D)  (None, 32, 22, 22)    9248        activation_2[0][0]               
+____________________________________________________________________________________________________
+dropout_2 (Dropout)              (None, 32, 22, 22)    0           convolution2d_3[0][0]            
+____________________________________________________________________________________________________
+activation_3 (Activation)        (None, 32, 22, 22)    0           dropout_2[0][0]                  
+____________________________________________________________________________________________________
+maxpooling2d_1 (MaxPooling2D)    (None, 32, 11, 11)    0           activation_3[0][0]               
+____________________________________________________________________________________________________
+dropout_3 (Dropout)              (None, 32, 11, 11)    0           maxpooling2d_1[0][0]             
+____________________________________________________________________________________________________
+flatten_1 (Flatten)              (None, 3872)          0           dropout_3[0][0]                  
+____________________________________________________________________________________________________
+dense_1 (Dense)                  (None, 512)           1982976     flatten_1[0][0]                  
+____________________________________________________________________________________________________
+activation_4 (Activation)        (None, 512)           0           dense_1[0][0]                    
+____________________________________________________________________________________________________
+dropout_4 (Dropout)              (None, 512)           0           activation_4[0][0]               
+____________________________________________________________________________________________________
+dense_2 (Dense)                  (None, 10)            5130        dropout_4[0][0]                  
+____________________________________________________________________________________________________
+activation_5 (Activation)        (None, 10)            0           dense_2[0][0]                    
+====================================================================================================
+Total params: 2006922
+____________________________________________________________________________________________________
+./EEII.hdf5
+6000/6000 [==============================] - 6s     
+6000
+[0.019949056806042791, 0.99583333333333335]
+sharif-apu@sharifapu-MS-7721:~/MEGAsync/new_numeral/exp/cross validation$ python cmaterdb_new_numeral_4.py 
+Using Theano backend.
+Using gpu device 0: GeForce GT 610 (CNMeM is enabled with initial size: 10.0% of memory, cuDNN not available)
+/usr/local/lib/python2.7/dist-packages/keras/datasets/data_utils.py:4: UserWarning: data_utils has been moved to keras.utils.data_utils.
+  warnings.warn('data_utils has been moved to keras.utils.data_utils.')
+./iso_char_cnn_weight/
+Training Data is Getting Ready!
+____________________________________________________________________________________________________
+Layer (type)                     Output Shape          Param #     Connected to                     
+====================================================================================================
+convolution2d_1 (Convolution2D)  (None, 32, 26, 26)    320         convolution2d_input_1[0][0]      
+____________________________________________________________________________________________________
+activation_1 (Activation)        (None, 32, 26, 26)    0           convolution2d_1[0][0]            
+____________________________________________________________________________________________________
+convolution2d_2 (Convolution2D)  (None, 32, 24, 24)    9248        activation_1[0][0]               
+____________________________________________________________________________________________________
+dropout_1 (Dropout)              (None, 32, 24, 24)    0           convolution2d_2[0][0]            
+____________________________________________________________________________________________________
+activation_2 (Activation)        (None, 32, 24, 24)    0           dropout_1[0][0]                  
+____________________________________________________________________________________________________
+convolution2d_3 (Convolution2D)  (None, 32, 22, 22)    9248        activation_2[0][0]               
+____________________________________________________________________________________________________
+dropout_2 (Dropout)              (None, 32, 22, 22)    0           convolution2d_3[0][0]            
+____________________________________________________________________________________________________
+activation_3 (Activation)        (None, 32, 22, 22)    0           dropout_2[0][0]                  
+____________________________________________________________________________________________________
+maxpooling2d_1 (MaxPooling2D)    (None, 32, 11, 11)    0           activation_3[0][0]               
+____________________________________________________________________________________________________
+dropout_3 (Dropout)              (None, 32, 11, 11)    0           maxpooling2d_1[0][0]             
+____________________________________________________________________________________________________
+flatten_1 (Flatten)              (None, 3872)          0           dropout_3[0][0]                  
+____________________________________________________________________________________________________
+dense_1 (Dense)                  (None, 512)           1982976     flatten_1[0][0]                  
+____________________________________________________________________________________________________
+activation_4 (Activation)        (None, 512)           0           dense_1[0][0]                    
+____________________________________________________________________________________________________
+dropout_4 (Dropout)              (None, 512)           0           activation_4[0][0]               
+____________________________________________________________________________________________________
+dense_2 (Dense)                  (None, 10)            5130        dropout_4[0][0]                  
+____________________________________________________________________________________________________
+activation_5 (Activation)        (None, 10)            0           dense_2[0][0]                    
+====================================================================================================
+Total params: 2006922
+____________________________________________________________________________________________________
+./EEIII.hdf5
+6000/6000 [==============================] - 6s     
+6000
+[0.018788512937724589, 0.99616666666666664]
+sharif-apu@sharifapu-MS-7721:~/MEGAsync/new_numeral/exp/cross validation$ python cmaterdb_new_numeral_4.py 
+Using Theano backend.
+Using gpu device 0: GeForce GT 610 (CNMeM is enabled with initial size: 10.0% of memory, cuDNN not available)
+/usr/local/lib/python2.7/dist-packages/keras/datasets/data_utils.py:4: UserWarning: data_utils has been moved to keras.utils.data_utils.
+  warnings.warn('data_utils has been moved to keras.utils.data_utils.')
+./iso_char_cnn_weight/
+Training Data is Getting Ready!
+____________________________________________________________________________________________________
+Layer (type)                     Output Shape          Param #     Connected to                     
+====================================================================================================
+convolution2d_1 (Convolution2D)  (None, 32, 26, 26)    320         convolution2d_input_1[0][0]      
+____________________________________________________________________________________________________
+activation_1 (Activation)        (None, 32, 26, 26)    0           convolution2d_1[0][0]            
+____________________________________________________________________________________________________
+convolution2d_2 (Convolution2D)  (None, 32, 24, 24)    9248        activation_1[0][0]               
+____________________________________________________________________________________________________
+dropout_1 (Dropout)              (None, 32, 24, 24)    0           convolution2d_2[0][0]            
+____________________________________________________________________________________________________
+activation_2 (Activation)        (None, 32, 24, 24)    0           dropout_1[0][0]                  
+____________________________________________________________________________________________________
+convolution2d_3 (Convolution2D)  (None, 32, 22, 22)    9248        activation_2[0][0]               
+____________________________________________________________________________________________________
+dropout_2 (Dropout)              (None, 32, 22, 22)    0           convolution2d_3[0][0]            
+____________________________________________________________________________________________________
+activation_3 (Activation)        (None, 32, 22, 22)    0           dropout_2[0][0]                  
+____________________________________________________________________________________________________
+maxpooling2d_1 (MaxPooling2D)    (None, 32, 11, 11)    0           activation_3[0][0]               
+____________________________________________________________________________________________________
+dropout_3 (Dropout)              (None, 32, 11, 11)    0           maxpooling2d_1[0][0]             
+____________________________________________________________________________________________________
+flatten_1 (Flatten)              (None, 3872)          0           dropout_3[0][0]                  
+____________________________________________________________________________________________________
+dense_1 (Dense)                  (None, 512)           1982976     flatten_1[0][0]                  
+____________________________________________________________________________________________________
+activation_4 (Activation)        (None, 512)           0           dense_1[0][0]                    
+____________________________________________________________________________________________________
+dropout_4 (Dropout)              (None, 512)           0           activation_4[0][0]               
+____________________________________________________________________________________________________
+dense_2 (Dense)                  (None, 10)            5130        dropout_4[0][0]                  
+____________________________________________________________________________________________________
+activation_5 (Activation)        (None, 10)            0           dense_2[0][0]                    
+====================================================================================================
+Total params: 2006922
+____________________________________________________________________________________________________
+./EEMII.hdf5
+6000/6000 [==============================] - 6s     
+6000
+[0.030188829125215609, 0.99616666666666664]
+sharif-apu@sharifapu-MS-7721:~/MEGAsync/new_numeral/exp/cross validation$ ^C
+sharif-apu@sharifapu-MS-7721:~/MEGAsync/new_numeral/exp/cross validation$ python cmaterdb_new_numeral_4.py 
+Using Theano backend.
+
+
+
+
+
+
+
+
+
+
+
+Using gpu device 0: GeForce GT 610 (CNMeM is enabled with initial size: 10.0% of memory, cuDNN not available)
+
+
+
+
+
+
+
+/usr/local/lib/python2.7/dist-packages/keras/datasets/data_utils.py:4: UserWarning: data_utils has been moved to keras.utils.data_utils.
+  warnings.warn('data_utils has been moved to keras.utils.data_utils.')
+./iso_char_cnn_weight/
+Training Data is Getting Ready!
+____________________________________________________________________________________________________
+Layer (type)                     Output Shape          Param #     Connected to                     
+====================================================================================================
+convolution2d_1 (Convolution2D)  (None, 32, 26, 26)    320         convolution2d_input_1[0][0]      
+____________________________________________________________________________________________________
+activation_1 (Activation)        (None, 32, 26, 26)    0           convolution2d_1[0][0]            
+____________________________________________________________________________________________________
+convolution2d_2 (Convolution2D)  (None, 32, 24, 24)    9248        activation_1[0][0]               
+____________________________________________________________________________________________________
+dropout_1 (Dropout)              (None, 32, 24, 24)    0           convolution2d_2[0][0]            
+____________________________________________________________________________________________________
+activation_2 (Activation)        (None, 32, 24, 24)    0           dropout_1[0][0]                  
+____________________________________________________________________________________________________
+convolution2d_3 (Convolution2D)  (None, 32, 22, 22)    9248        activation_2[0][0]               
+____________________________________________________________________________________________________
+maxpooling2d_1 (MaxPooling2D)    (None, 32, 11, 11)    0           convolution2d_3[0][0]            
+____________________________________________________________________________________________________
+dropout_2 (Dropout)              (None, 32, 11, 11)    0           maxpooling2d_1[0][0]             
+____________________________________________________________________________________________________
+activation_3 (Activation)        (None, 32, 11, 11)    0           dropout_2[0][0]                  
+____________________________________________________________________________________________________
+convolution2d_4 (Convolution2D)  (None, 32, 9, 9)      9248        activation_3[0][0]               
+____________________________________________________________________________________________________
+dropout_3 (Dropout)              (None, 32, 9, 9)      0           convolution2d_4[0][0]            
+____________________________________________________________________________________________________
+activation_4 (Activation)        (None, 32, 9, 9)      0           dropout_3[0][0]                  
+____________________________________________________________________________________________________
+convolution2d_5 (Convolution2D)  (None, 32, 7, 7)      9248        activation_4[0][0]               
+____________________________________________________________________________________________________
+dropout_4 (Dropout)              (None, 32, 7, 7)      0           convolution2d_5[0][0]            
+____________________________________________________________________________________________________
+activation_5 (Activation)        (None, 32, 7, 7)      0           dropout_4[0][0]                  
+____________________________________________________________________________________________________
+flatten_1 (Flatten)              (None, 1568)          0           activation_5[0][0]               
+____________________________________________________________________________________________________
+dense_1 (Dense)                  (None, 512)           803328      flatten_1[0][0]                  
+____________________________________________________________________________________________________
+activation_6 (Activation)        (None, 512)           0           dense_1[0][0]                    
+____________________________________________________________________________________________________
+dropout_5 (Dropout)              (None, 512)           0           activation_6[0][0]               
+____________________________________________________________________________________________________
+dense_2 (Dense)                  (None, 10)            5130        dropout_5[0][0]                  
+____________________________________________________________________________________________________
+activation_7 (Activation)        (None, 10)            0           dense_2[0][0]                    
+====================================================================================================
+Total params: 845770
+____________________________________________________________________________________________________
+./EE3+.hdf5
+6000/6000 [==============================] - 7s     
+6000
+[0.018440335603508478, 0.99533333333333329]
+sharif-apu@sharifapu-MS-7721:~/MEGAsync/new_numeral/exp/cross validation$ 
+sharif-apu@sharifapu-MS-7721:~/MEGAsync/new_numeral/exp/cross validation$ 
+sharif-apu@sharifapu-MS-7721:~/MEGAsync/new_numeral/exp/cross validation$ 
+sharif-apu@sharifapu-MS-7721:~/MEGAsync/new_numeral/exp/cross validation$ 
+sharif-apu@sharifapu-MS-7721:~/MEGAsync/new_numeral/exp/cross validation$ 
+sharif-apu@sharifapu-MS-7721:~/MEGAsync/new_numeral/exp/cross validation$ 
+sharif-apu@sharifapu-MS-7721:~/MEGAsync/new_numeral/exp/cross validation$ 
+sharif-apu@sharifapu-MS-7721:~/MEGAsync/new_numeral/exp/cross validation$ 
+sharif-apu@sharifapu-MS-7721:~/MEGAsync/new_numeral/exp/cross validation$ 
+sharif-apu@sharifapu-MS-7721:~/MEGAsync/new_numeral/exp/cross validation$ 
+sharif-apu@sharifapu-MS-7721:~/MEGAsync/new_numeral/exp/cross validation$ 
+sharif-apu@sharifapu-MS-7721:~/MEGAsync/new_numeral/exp/cross validation$ 
+sharif-apu@sharifapu-MS-7721:~/MEGAsync/new_numeral/exp/cross validation$ 
+sharif-apu@sharifapu-MS-7721:~/MEGAsync/new_numeral/exp/cross validation$ 
+sharif-apu@sharifapu-MS-7721:~/MEGAsync/new_numeral/exp/cross validation$ 
+sharif-apu@sharifapu-MS-7721:~/MEGAsync/new_numeral/exp/cross validation$ 
+sharif-apu@sharifapu-MS-7721:~/MEGAsync/new_numeral/exp/cross validation$ 
+sharif-apu@sharifapu-MS-7721:~/MEGAsync/new_numeral/exp/cross validation$ 
+sharif-apu@sharifapu-MS-7721:~/MEGAsync/new_numeral/exp/cross validation$ 
+
